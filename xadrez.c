@@ -9,13 +9,16 @@ int main() {
     int movimentacaoBispo = 5;
     int movimentacaoTorre = 5;
     int movimentacaoRainha = 8;
+    int movimentacaoCavalo = 3;
     int opcao;
     int i = 0;
+    int j = 0;
 
     printf("Qual peça você deseja movimentar ?\n");
     printf("1. Bispo\n");
     printf("2. Torre\n");
     printf("3. Rainha\n");
+    printf("4. Cavalo\n");
     scanf("%d", &opcao);
 
     switch(opcao){
@@ -46,6 +49,19 @@ int main() {
             
             break;
         }
+        
+        case 4:
+            for ( i = 0; i <1; i++)
+            {
+                
+                while (j<2)
+                {
+                    printf("Cavalo movimentou para baixo \n");
+                    j++;
+                }
+            printf("Cavalo movimentou para esquerda\n");
+            }
+            
         default:
         printf("Opção inválida");
         break;
