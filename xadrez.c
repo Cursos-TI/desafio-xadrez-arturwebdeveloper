@@ -4,10 +4,21 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+void movimentacaoTorre(int numero){
+    if (numero>0)
+    {
+        printf("Torre movimentou para Direita\n");
+        movimentacaoTorre(numero -1);
+    }
+    
+}
+
+
+
 int main() {
 
-    int movimentacaoBispo = 5;
-    int movimentacaoTorre = 5;
+    int valorMovimentoBispo = 5;
+    int valorMovimentoTorre = 5;
     int movimentacaoRainha = 8;
     int movimentacaoCavalo = 3;
     int opcao;
@@ -24,21 +35,18 @@ int main() {
     switch(opcao){
         case 1:
             
-            while ( i < movimentacaoBispo)
+            while (valorMovimentoBispo>0)
             {
-                printf("Bispo movimentou para Cima, Direita\n");
-                i++;
+                printf("Bispo movimentou na diagonal superior direita\n");
+                valorMovimentoBispo --;
             }
+            
         
         break;
     
         case 2:
             
-            do
-            {
-                printf("Torre movimentou para Direita\n");
-                i++;
-            } while (i < movimentacaoTorre);
+         movimentacaoTorre(valorMovimentoTorre);
         break;
     
         case 3:{
